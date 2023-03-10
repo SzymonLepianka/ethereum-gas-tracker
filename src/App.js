@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useInterval } from "./hooks/useInterval";
 
 // Infura URl
-const baseUrl = "https://mainnet.infura.io/v3/fbd1cd3ce9494434ac35c07bac0e4e74";
+const baseUrl = "https://mainnet.infura.io/v3/" + process.env.REACT_APP_INFURA_API_KEY;
 
 // Data and configuration required to make the API request
 let data = JSON.stringify({
