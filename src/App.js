@@ -3,13 +3,14 @@ import axios from "axios";
 import { useState } from "react";
 import { useInterval } from "./hooks/useInterval";
 
-// Infura URl
-const baseUrl = "https://mainnet.infura.io/v3/" + process.env.REACT_APP_INFURA_API_KEY;
+// Infura URL
+const baseUrl =
+  "https://mainnet.infura.io/v3/" + process.env.REACT_APP_INFURA_API_KEY;
 
 // Data and configuration required to make the API request
 let data = JSON.stringify({
   jsonrpc: "2.0",
-  method: "eth_feeHistory",
+  method: "eth_feeHistory", // this method takes two required arguments: blockCount and newestBlock
   params: ["0x5", "latest", []],
   id: 1,
 });
